@@ -1,10 +1,13 @@
-<p>home section</p>
 <div>
+  <app-search (searchValue)="onSearch($event)"></app-search>
   <div>
-    <div class="flex container  mt-4">
-      @for (item of DataOfArray; track $index) {
-      <div class=" gap-2 mx-4 mt-2">
-        <app-product-card></app-product-card>
+    <div class="flex container mt-4">
+      @for (item of filterProduct; track $index) {
+      <div class="gap-2 mx-4 mt-2">
+        <app-product-card
+          [product]="item"
+          (viewProduct)="onViewProduct($event)"
+        ></app-product-card>
       </div>
       }
     </div>
