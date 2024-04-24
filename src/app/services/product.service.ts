@@ -10,6 +10,11 @@ export class ProductService {
   constructor() { }
 
   getProducts() {
-   return this.httpClient.get("http://localhost:3000/products");
+    return this.httpClient.get("http://localhost:3000/products");
+  }
+  getProductsById(id: number) {
+    console.log(id);
+    return this.httpClient.get("http://localhost:3000/products/" + id);
+  
   }
 }
