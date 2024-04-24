@@ -10,7 +10,7 @@ import { SearchComponent } from './components/search/search.component';
   standalone: true,
   imports: [RouterOutlet, HomeComponent, HeaderComponent, SearchComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  // styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'project Info';
